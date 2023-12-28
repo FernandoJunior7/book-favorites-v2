@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="light">
 	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="shortcut icon" href="/assets/bookIcon.svg" type="image/x-icon" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>BookFav - v2</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rubik+Doodle+Shadow&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
 	</head>
 	<body>
-		<header></header>
-		<main id="app"></main>
-		<footer></footer>
+		<div id="container">
+			<header>
+				<div id="toggle-theme">
+					<label class="switch">
+						<input type="checkbox" />
+						<span class="slider"></span>
+					</label>
+				</div>
+				<div class="logo">
+					<img
+						src="/assets/bookIcon.svg"
+						alt="Ícone representando um livro roxo"
+					/>
+					<a
+						href="https://youtu.be/xvFZjo5PgG0?si=zOlAhYXDycYlhNYv"
+						class="brand-name"
+						>Fav</a
+					>
+				</div>
+				<nav>
+					<a href="/biblioteca">Biblioteca</a>
+					<div class="input-wrapper">
+						<label for="search-input" class="sr-only">Nome do livro</label>
+						<i class="ph ph-magnifying-glass icon"></i>
+						<input
+							type="text"
+							id="search-input"
+							placeholder="Pesquise um livro"
+						/>
+					</div>
+				</nav>
+			</header>
+			<main id="app"></main>
+			<footer>
+				<div id="footer-wrapper">
+					<span>feito com amor, <a href="https://github.com/fernandojunior7" target="_blank">@fernandojunior7</a></span>
+					<img
+						src="/assets/wave.svg"
+						alt="Apenas um svg decorativo em forma de onda"
+					/>
+				</div>
+			</footer>
+		</div>
 	</body>
 </html>

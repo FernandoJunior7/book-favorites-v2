@@ -1,0 +1,235 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+
+	--purple-color: #6c63ff;
+	--pink-color: #c570ff;
+	--yellow-color: #ffd07d;
+	--blue-color: #57a7ff;
+	--red-color: #b72b2b;
+	--gradient-color: linear-gradient(272deg, #57a7ff 22.69%, #c570ff 82.57%);
+}
+
+:root.light {
+	--background-color: #d8d5d9;
+	--text-color: #3d3d3d;
+	--pure-color: #fff;
+	--not-so-pure-color: #bebebe80;
+}
+
+:root.dark {
+	--background-color: #3d3d3d;
+	--text-color: #d8d5d9;
+	--pure-color: #000;
+	--not-so-pure-color: #25252580;
+}
+
+body {
+	font-size: 1.6rem;
+
+	font-family: 'Poppins', sans-serif;
+
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important; /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important; /* 3 */
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+	clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+#container {
+	max-width: 1000px;
+
+	margin: 0 auto;
+
+	padding: 5rem 0 0;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* HEADER */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* toggle theme */
+
+#toggle-theme {
+	position: absolute;
+	top: 0.8rem;
+	right: 0.8rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	font-size: 17px;
+	position: relative;
+	display: inline-block;
+	width: 3.5em;
+	height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	--background: #28096b;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--background);
+	transition: 0.5s;
+	border-radius: 30px;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 1.4em;
+	width: 1.4em;
+	border-radius: 50%;
+	left: 10%;
+	bottom: 15%;
+	box-shadow: inset 8px -4px 0px 0px #fff000;
+	background: var(--background);
+	transition: 0.5s;
+}
+
+input:checked + .slider {
+	background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+	transform: translateX(100%);
+	box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+/* navbar */
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.brand-name {
+	font-family: 'Rubik Doodle Shadow', sans-serif;
+	font-size: 4.8rem;
+	color: var(--text-color);
+
+	line-height: 90%;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+}
+
+nav a {
+	font-size: 2.4rem;
+	color: var(--text-color);
+}
+
+.input-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	border-radius: 8px;
+	padding: 0.6rem 1.2rem;
+
+	background-color: var(--not-so-pure-color);
+}
+
+.icon {
+	font-size: 3.2rem;
+	color: var(--text-color);
+}
+
+input {
+	border: none;
+	background: none;
+	font-size: 1.6rem;
+}
+
+input::placeholder {
+	color: var(--text-color);
+}
+
+/* FOOTER */
+
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#footer-wrapper {
+	position: relative;
+}
+
+footer span {
+	position: absolute;
+	left: 50%;
+	bottom: 20%;
+	transform: translateX(-50%);
+
+  font-weight: bold;
+}
+
+footer a {
+  color: var(--yellow-color);
+  font-size: 1.2em;
+}
