@@ -65,8 +65,20 @@ body {
 }
 
 a {
+  display: inline-block;
+
 	cursor: pointer;
 	text-decoration: none;
+
+	transition: 0.3s;
+}
+
+a:hover {
+	transform: rotate(-5deg);
+}
+
+a:focus {
+	outline-color: var(--purple-color);
 }
 
 img {
@@ -190,6 +202,21 @@ nav a {
 	padding: 0.6rem 1.2rem;
 
 	background-color: var(--not-so-pure-color);
+
+	transition: 0.3s;
+}
+
+.input-wrapper:hover {
+	cursor: pointer;
+}
+
+.input-wrapper:focus-within {
+	outline: 2px solid var(--text-color);
+}
+
+.input-wrapper:focus-within,
+.input-wrapper:hover {
+	transform: scale(1.2);
 }
 
 .icon {
@@ -205,6 +232,10 @@ input {
 
 input::placeholder {
 	color: var(--text-color);
+}
+
+input:focus {
+	outline: none;
 }
 
 /* FOOTER */
@@ -224,12 +255,13 @@ footer span {
 	position: absolute;
 	left: 50%;
 	bottom: 20%;
+
 	transform: translateX(-50%);
 
-  font-weight: bold;
+	font-weight: bold;
 }
 
 footer a {
-  color: var(--yellow-color);
-  font-size: 1.2em;
+	color: var(--yellow-color);
+	font-size: 1.2em;
 }
