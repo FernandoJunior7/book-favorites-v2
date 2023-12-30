@@ -19,12 +19,6 @@
 	<body>
 		<div id="container">
 			<header>
-				<div id="toggle-theme">
-					<label class="switch">
-						<input type="checkbox" />
-						<span class="slider"></span>
-					</label>
-				</div>
 				<div class="logo">
 					<img
 						src="/assets/bookIcon.svg"
@@ -37,6 +31,13 @@
 					>
 				</div>
 				<nav>
+					<div id="toggle-theme">
+						<label class="switch">
+							<input type="checkbox" />
+							<span class="slider"></span>
+						</label>
+					</div>
+					<a href="/">Home</a>
 					<a href="/biblioteca">Biblioteca</a>
 					<div class="input-wrapper">
 						<label for="search-input" class="sr-only">Nome do livro</label>
@@ -51,19 +52,18 @@
 			</header>
 			<main id="app"></main>
 			<footer>
-				<div id="footer-wrapper">
-					<span
-						>feito com amor,
-						<a href="https://github.com/fernandojunior7" target="_blank"
-							>@fernandojunior7</a
-						></span
-					>
-					<img
-						src="/assets/wave.svg"
-						alt="Apenas um svg decorativo em forma de onda"
-					/>
-				</div>
+				<span
+					>feito com amor,
+					<a href="https://github.com/fernandojunior7" target="_blank"
+						>@fernandojunior7</a
+					></span
+				>
 			</footer>
+			<img
+				class="svg-decoration"
+				src="/assets/wave.svg"
+				alt="Apenas um svg decorativo em forma de onda"
+			/>
 		</div>
 	</body>
 </html>
