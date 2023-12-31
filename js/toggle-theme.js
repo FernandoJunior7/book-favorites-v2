@@ -1,12 +1,10 @@
-const toggleTheme = document.getElementById('toggle-theme');
-const checkbox = toggleTheme.querySelector('input');
-const root = document.documentElement;
+import { checkbox, searchBar, searchInput } from './elements.js';
+import { themeToggle, getInputValue } from './actions.js';
 
 export function registerThemeControl() {
 	checkbox.addEventListener('click', themeToggle);
-}
-
-function themeToggle() {
-	root.classList.toggle('light');
-	root.classList.toggle('dark');
+	searchBar.addEventListener('click', () => {
+		searchInput.focus();
+	});
+	searchInput.addEventListener('keypress', getInputValue);
 }

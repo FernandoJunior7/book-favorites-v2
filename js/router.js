@@ -22,9 +22,6 @@ export class Router {
 			.then((data) => data.text())
 			.then((data) => {
 				const app = document.getElementById('app');
-
-				console.log(app);
-				console.log(data);
 				app.innerHTML = data;
 			});
 	}
